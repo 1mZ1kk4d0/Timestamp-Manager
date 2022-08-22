@@ -1,0 +1,16 @@
+{
+  "name": "timestamp-manager",
+  "description": "This project uses the MS library, made by another developer credits to Vercel, this project aims to help in timestamp conversions and formatting such as milliseconds to seconds and so on.",
+  "author": "Zikkado",
+  "version": "0.0.1",
+  "main": "./index.cjs",
+  "type": "module",
+  "license": "ISC",
+  "repository": "Zikkado/Timestamp-Manager",
+  "dependencies": {
+    "ms": "^2.1.3"
+  },
+  "devDependencies": {
+    "@types/node": "^18.7.9"
+  }
+}
