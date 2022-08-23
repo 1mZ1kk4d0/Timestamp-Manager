@@ -1,4 +1,5 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 exports.FormatDate = exports.SecondsToMillis = exports.MillisToSeconds = exports.AddTimeToDate = void 0;
 //const Month: any[] = ['Jan', 'Fev', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Out', 'Nov', 'Dez']
 const ms = require("ms");
@@ -78,3 +79,4 @@ function FormatDate(format, date) {
     return format.replace('h', h).replace('m', m).replace('ss', s).replace('yyyy', yyyy).replace('mm', mm).replace('dd', dd);
 }
 exports.FormatDate = FormatDate;
+//# sourceMappingURL=index.js.map

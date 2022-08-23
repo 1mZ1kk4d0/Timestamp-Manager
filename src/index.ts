@@ -2,18 +2,6 @@
 //const Month: any[] = ['Jan', 'Fev', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Out', 'Nov', 'Dez']
 const ms = require("ms");
 
-
-interface Datas {
-    a: string
-    b: string
-    c?: number
-}
-
-
-
-
-
-
 /**
  *
  * @param {number} time
@@ -86,7 +74,7 @@ export function FormatDate(format: string, date?: Date): string {
         const dd: string = dd_0 <= 9 ? dd_0 <= 0 ? "00" : `0${dd_0}` : dd_0.toString();
 
 
-        return format.replace('h', h).replace('m', m).replace('ss', s).replace('yyyy', yyyy).replace('mm', mm).replace('dd', dd);
+        return format.replace('h', h).replace('m', m).replace('s', s).replace('yyyy', yyyy).replace('mm', mm).replace('dd', dd);
     }
 
 

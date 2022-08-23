@@ -1,5 +1,8 @@
 # Timestamp Manager
 
+I'm new to typescript, I would like to make it clear if I still don't know enough but I want to learn more and more, this is my first external LIB that I leave open. If you want to help me join my discord.
+- [Discord](https://discord.gg/FA8feuXEmE)
+
 Library made for timestamp conversion and formatting (under development)
 
 - Simple to use.
