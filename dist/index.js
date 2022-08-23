@@ -61,7 +61,7 @@ function FormatDate(format, date) {
         const yyyy = yyyy_0 <= 9 ? yyyy_0 <= 0 ? "00" : `0${yyyy_0}` : yyyy_0.toString();
         const mm = mm_0 <= 9 ? mm_0 <= 0 ? "00" : `0${mm_0}` : mm_0.toString();
         const dd = dd_0 <= 9 ? dd_0 <= 0 ? "00" : `0${dd_0}` : dd_0.toString();
-        return format.replace('h', h).replace('m', m).replace('ss', s).replace('yyyy', yyyy).replace('mm', mm).replace('dd', dd);
+        return format.replace('h', h).replace('m', m).replace('s', s).replace('yyyy', yyyy).replace('mm', mm).replace('dd', dd);
     }
     const h_1 = date.getHours();
     const m_1 = date.getMinutes();
