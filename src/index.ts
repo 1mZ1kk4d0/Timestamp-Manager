@@ -24,7 +24,7 @@ interface Datas {
  */
 export function AddTimeToDate(time: number, inSeconds?: boolean): number {
 
-    if (inSeconds === undefined)
+    if (inSeconds === undefined || !inSeconds)
         return new Date().getTime() + ms(time);
 
     return MillisToSeconds(new Date().getTime() + ms(time));
@@ -50,7 +50,6 @@ export function MillisToSeconds(timestamp: number): number {
 export function SecondsToMillis(timestamp: number): number {
     return Math.floor(timestamp * 1000);
 }
-
 
 
 

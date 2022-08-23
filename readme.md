@@ -12,6 +12,8 @@ Library made for timestamp conversion and formatting (under development)
 ```
 ## Examples
 ```javascript
+FormatDate('You are in the day mm/dd/yyyy'); 
+FormatDate('you are in the day mm/dd/yyyy', new Date(2266150973543)) // day = dd, month = mm, year = yyyy, hour = h, minutes = m, seconds = s
 AddTimeToDate('1d'); //add 1 day in timestamp -> return in milliseconds
 AddTimeToDate('1d', true); //add 1 day in timestamp -> return in seconds
 MillisToSeconds(1660871309001); //return in seconds
