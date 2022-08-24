@@ -2,7 +2,7 @@
   "name": "timestamp-manager",
   "description": "This project uses the MS library, made by another developer credits to Vercel, this project aims to help in timestamp conversions and formatting such as milliseconds to seconds and so on.",
   "author": "Zikkado",
-  "version": "1.0.6",
+  "version": "1.2.0",
   "main": "./dist/index.js",
   "typings": "dist/index.d.ts",
   "module": "dist/index.mjs",

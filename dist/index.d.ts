@@ -1,32 +1,24 @@
+interface OptionsDate {
+    monthName?: boolean;
+    date?: Date;
+}
 /**
- *
- * @param {number} time
- * @param {boolean} inSeconds
  * @copyright This function uses MS library, all library credit goes to Vercel
- * @description - Adds a time to the current timestamp. example: AddTimeToDate('1d') returns in milliseconds - s, m, h, d,
- * @returns { number } return number
+ * @description - Adds a time to the current timestamp. example: AddTimeToDate('1d') returns in milliseconds - s, m, h, d
  */
-export declare function AddTimeToDate(time: number, inSeconds?: boolean): number;
+declare function AddTimeToDate(time: number, inSeconds?: boolean): number;
 /**
  *
- * @param {number} timestamp
  * @description - Convert timestamp time from milliseconds to seconds
- * @returns {number}
  */
-export declare function MillisToSeconds(timestamp: number): number;
+declare function MillisToSeconds(timestamp: number): number;
 /**
- *
- * @param {number} timestamp
  * @description - Convert timestamp time from seconds to milliseconds
- * @returns {number}
  */
-export declare function SecondsToMillis(timestamp: number): number;
+declare function SecondsToMillis(timestamp: number): number;
 /**
- *
- * @param {string} format
- * @param {Date} date
- * @description - Do a date formatting to string - FormatDate('you are in the day mm/dd/yyyy') or FormatDate('you are in the day mm/dd/yyyy', new Date(2266150973543))
- * @returns {number}
+ * @description - Do a date formatting to string - StringFormat('you are in the day DD/MM/YYYY') or StringFormat('you are in the day DD/MM/YYYY', { monthName: true, date: new Date(47865378525837) })
  */
-export declare function FormatDate(format: string, date?: Date): string;
+declare function StringFormat(format: string, options?: OptionsDate): string;
+export { StringFormat, SecondsToMillis, MillisToSeconds, AddTimeToDate };
 //# sourceMappingURL=index.d.ts.map
