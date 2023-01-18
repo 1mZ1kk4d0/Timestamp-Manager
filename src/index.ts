@@ -70,10 +70,10 @@ function StringFormat(format: string, options?: OptionsDate): string {
 
 
     if (typeof options?.monthName === 'undefined' || !options?.monthName)
-        return format.replace('h', h).replace('m', m).replace('s', s).replace('YYYY', yyyy).replace('MM', mm).replace('DD', dd);
+        return format.replace('hr', h).replace('mn', m).replace('ss', s).replace('YYYY', yyyy).replace('MM', mm).replace('DD', dd);
 
 
-    return format.replace('h', h).replace('m', m).replace('s', s).replace('YYYY', yyyy).replace('MM', options!.monthName ? Month[mm_00] : mm).replace('DD', dd);
+    return format.replace('hr', h).replace('mn', m).replace('ss', s).replace('YYYY', yyyy).replace('MM', options!.monthName ? Month[mm_00] : mm).replace('DD', dd);
 
 }
 
