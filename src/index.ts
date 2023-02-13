@@ -15,7 +15,7 @@ interface OptionsDate {
  * @copyright This function uses MS library, all library credit goes to Vercel
  * @description - Adds a time to the current timestamp. example: AddTimeToDate('1d') returns in milliseconds - s, m, h, d
  */
-function AddTimeToDate(time: number, inSeconds?: boolean): number {
+function AddTimeToDate(time: number | string, inSeconds?: boolean): number {
 
     if (inSeconds === undefined || !inSeconds)
         return new Date().getTime() + ms(time);
