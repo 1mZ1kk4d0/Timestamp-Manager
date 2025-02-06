@@ -3,7 +3,18 @@
 const ms = require("ms");
 
 const Month: Array<string> = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+//const Week: Array<string> = ['Sun', 'Mon', 'Tues', 'Wednes', 'Thurs', 'Fri', 'Satur']
 
+
+const daysMap = {
+    sun: 0,
+    mon: 1,
+    tues: 2,
+    wednes: 3,
+    thurs: 4,
+    fri: 5,
+    satur: 6,
+};
 
 interface OptionsDate {
     monthName?: boolean
@@ -22,6 +33,30 @@ function AddTimeToDate(time: number | string, inSeconds?: boolean): number {
 
     return MillisToSeconds(new Date().getTime() + ms(time));
 
+}
+
+
+/**
+ * @description - You can advance up to a week and set specific times.
+ */
+function DefineNextDay(next_day: "sun" | "mon" | "tues" | "wednes" | "thurs" | "fri" | "satur", options: { hr?: number; min?: number; sec?: number, inSeconds?: boolean }) {
+    const date_now = new Date();
+
+    const targetDay = daysMap[next_day];
+    const currentDay = date_now.getDay();
+
+    const daysUntilNext = (targetDay - currentDay + 7) % 7 || 7;
+    
+    date_now.setDate(date_now.getDate() + daysUntilNext);
+    
+    date_now.setHours(
+        options.hr ?? 0,
+        options.min ?? date_now.getMinutes(),
+        options.sec ?? date_now.getSeconds(),
+        date_now.getMilliseconds()
+    );
+
+    return options.inSeconds ? MillisToSeconds(date_now.getTime()) : date_now.getTime();
 }
 
 /**
@@ -78,4 +113,4 @@ function StringFormat(format: string, options?: OptionsDate): string {
 }
 
 //Exports modules
-export { StringFormat, SecondsToMillis, MillisToSeconds, AddTimeToDate }
+export { StringFormat, SecondsToMillis, MillisToSeconds, AddTimeToDate, DefineNextDay }
